@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  componentToShow: string = 'Recipes';
 
+  getEmitedClick(eventData: {componentToShow: string}) {
+    this.componentToShow = eventData.componentToShow;
+    console.log(this.componentToShow);
+  }
+
+  isRecipes() {
+    return this.componentToShow === "Recipes";
+  }
 }

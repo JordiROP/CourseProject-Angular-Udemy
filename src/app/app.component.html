@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (clickToEmit)="getEmitedClick($event)"></app-header>
 <div class="container">
   <div class="row">
-    <div column-md-12>
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+    <div class="column-md-12">
+      <span *ngIf="isRecipes(); else isShopping"><app-recipes></app-recipes></span>
+      <ng-template #isShopping><app-shopping-list></app-shopping-list></ng-template>
     </div>
   </div>
 </div>
