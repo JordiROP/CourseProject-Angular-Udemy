@@ -10,7 +10,6 @@ export class AppComponent {
 
   getEmitedClick(eventData: {componentToShow: string}) {
     this.componentToShow = eventData.componentToShow;
-    console.log(this.componentToShow);
   }
 
   isRecipes() {
