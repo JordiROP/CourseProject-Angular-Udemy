@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ingredient} from "../../shared/ingredient.model";
-
+import {RecipeService} from "../recipe.service";
 @Component({
   selector: 'app-recipes-detail',
   templateUrl: './recipes-detail.component.html',
@@ -12,7 +12,11 @@ export class RecipesDetailComponent implements OnInit {
     imagePath: string,
     ingredients: Ingredient[]};
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
+
+  onAddToShoppingList(){
+    this.recipeService.addIngredientsToShoppingList(this.recipesDetails.ingredients);
+  }
 
   ngOnInit() {
   }
