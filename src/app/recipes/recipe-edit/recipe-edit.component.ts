@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params} from '@angular/router';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -9,6 +10,7 @@ import {ActivatedRoute, Params} from "@angular/router";
 export class RecipeEditComponent implements OnInit {
   id: number;
   editMode = false;
+  recipeEditForm = FormControl;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
