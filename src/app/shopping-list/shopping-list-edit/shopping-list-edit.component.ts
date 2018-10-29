@@ -40,6 +40,7 @@ export class ShoppingListEditComponent implements OnInit, OnDestroy {
   formIsValid() {
     return this.shoppingListEditForm.valid;
   }
+
   onSubmit() {
     const ingName = this.shoppingListEditForm.value.shopping_list_edit_form_name;
 
