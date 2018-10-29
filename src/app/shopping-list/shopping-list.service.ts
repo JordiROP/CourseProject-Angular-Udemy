@@ -30,9 +30,6 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: Ingredient[]) {
-    /*for(let ingredient of ingredients) {
-      this.addIngredient(ingredient);
-    }*/
     this.ingredients.push(...ingredients);
     this.ingredientsChange.next(this.ingredients.slice());
   }
