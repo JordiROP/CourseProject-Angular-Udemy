@@ -23,7 +23,9 @@
         </ng-template>
         <ng-template [ngIf]="getAuthentication()">
           <li>
-            <a style="cursor: pointer;" (click)="logOut()">
+            <a
+              style="cursor: pointer;" routerLink="/"
+              (click)="logOut()">
               LogOut
             </a>
           </li>
